@@ -1,5 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Button, Item } from 'semantic-ui-react'
+import { addToCart } from '../actions'
 
 // Mock products here for simplicity's sake
 const all_products = [
@@ -9,7 +11,7 @@ const all_products = [
   {"id": 4, "title": "iPhone 4", "price": 400.00 }
 ]
 
-const Products = () => {
+const ProductsList = ({addToCart}) => {
 
   const hasItems = all_products.length > 0
   const productsContent = hasItems ? (
@@ -22,7 +24,9 @@ const Products = () => {
             <span>{product.price}</span>
           </Item.Meta>
           <Item.Extra>
-            <Button primary floated='right'>
+            <Button
+              primary floated='right'
+              onClick={() => addToCart(product.id)}>
               Buy
             </Button>
           </Item.Extra>
@@ -40,8 +44,23 @@ const Products = () => {
   )
 }
 
-const mapStateToProps = state => ({
-  products: getProducts(state.products)
-})
+const mapStateToProps = (state) => {
+  return {
+    xyz: {}
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => {
+      dispatch(addToCart(id))
+    }
+  }
+}
+
+const Products = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProductsList)
 
 export default Products

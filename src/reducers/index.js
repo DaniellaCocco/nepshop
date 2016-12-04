@@ -1,6 +1,5 @@
 import { ADD_TO_CART } from '../constants'
 
-
 const initialState = {
   cart: [],
   total_number: 0,
@@ -9,6 +8,11 @@ const initialState = {
 
 const shopReducer = (state = initialState, action) => {
   switch (action.type) {
+    case ADD_TO_CART:
+      return {
+        ...state,
+        cart: [ ...state.cart, action.id ]
+      }
     default:
       return state
   }
