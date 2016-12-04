@@ -1,13 +1,40 @@
 import React, { Component } from 'react'
+import { Menu } from 'semantic-ui-react'
 
-export default class Shop extends Component {
+class MainMenu extends Component {
+  state = {}
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state
+
+    return (
+      <Menu>
+        <Menu.Item
+          name='products'
+          active={activeItem === 'products'}
+          onClick={this.handleItemClick}
+        >
+          Products
+        </Menu.Item>
+        <Menu.Item
+          name='cart'
+          active={activeItem === 'cart'}
+          onClick={this.handleItemClick}
+        >
+          Cart
+        </Menu.Item>
+      </Menu>
+    )
+  }
+}
+
+class Shop extends Component {
   render() {
     return (
       <div className="shop">
-        <div className="menu">
-          <div className="item">Products</div>
-          <div className="item">Cart</div>
-        </div>
+        <MainMenu />
         <div className="products">
           <div className="product">
             <p className="name">Fiat Panda</p>
@@ -27,3 +54,5 @@ export default class Shop extends Component {
     )
   }
 }
+
+export default Shop
