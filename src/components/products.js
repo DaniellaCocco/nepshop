@@ -22,4 +22,4 @@ const Products = () => (
   <Item.Group items={items} />
 )
 
-export default Products;
+export default Products
