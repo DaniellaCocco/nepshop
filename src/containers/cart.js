@@ -1,16 +1,25 @@
 import React, { Component } from 'react'
+import _ from 'lodash'
 import { connect } from 'react-redux'
 import { Item } from 'semantic-ui-react'
-
-let cart_items = []
 
 class CartItems extends Component {
 
   render() {
 
+    let cart_items = this.props.state.cart
     const hasItems = cart_items.length > 0
     const cartContent = hasItems ? (
-      <Item.Group items={cart_items} />
+      cart_items.map(product =>
+        <Item key={_.uniqueId('cart_product_')}>
+          <Item.Content>
+            <Item.Header>{product.title}</Item.Header>
+            <Item.Meta>
+              <span>{product.price}</span>
+            </Item.Meta>
+          </Item.Content>
+        </Item>
+      )
     ) : (
       <p>Your cart is empty.</p>
     )
@@ -25,7 +34,7 @@ class CartItems extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    xyz: {}
+    state
   }
 }
 
