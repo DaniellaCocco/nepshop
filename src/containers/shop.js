@@ -1,5 +1,26 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Item } from 'semantic-ui-react'
+
+const items = [
+  {
+    childKey: 0,
+    image: 'http://semantic-ui.com/images/wireframe/image.png',
+    header: 'iPhone 6',
+    description: 'Description',
+    meta: 'Metadata'
+  },
+  {
+    childKey: 1,
+    image: 'http://semantic-ui.com/images/wireframe/image.png',
+    header: 'iPhone 7',
+    description: 'Description',
+    meta: 'Metadata'
+  },
+]
+
+const Products = () => (
+  <Item.Group items={items} />
+)
 
 class MainMenu extends Component {
   state = {}
@@ -35,18 +56,7 @@ class Shop extends Component {
     return (
       <div className="shop">
         <MainMenu />
-        <div className="products">
-          <div className="product">
-            <p className="name">Fiat Panda</p>
-            <p className="year">2006</p>
-            <p className="color">Black</p>
-          </div>
-          <div className="product">
-            <p className="name">Fiat 500</p>
-            <p className="year">2010</p>
-            <p className="color">Red</p>
-          </div>
-        </div>
+        <Products />
         <div className="cart">
           <p>Your cart is empty.</p>
         </div>
