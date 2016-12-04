@@ -1,26 +1,6 @@
 import React, { Component } from 'react'
+import Products from '../components/products'
 import { Header, Item, Menu } from 'semantic-ui-react'
-
-const items = [
-  {
-    childKey: 0,
-    image: 'http://semantic-ui.com/images/wireframe/image.png',
-    header: 'iPhone 6',
-    description: 'Description',
-    meta: 'Metadata'
-  },
-  {
-    childKey: 1,
-    image: 'http://semantic-ui.com/images/wireframe/image.png',
-    header: 'iPhone 7',
-    description: 'Description',
-    meta: 'Metadata'
-  },
-]
-
-const Products = () => (
-  <Item.Group items={items} />
-)
 
 let cart_items = []
 
