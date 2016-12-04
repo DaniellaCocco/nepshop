@@ -1,3 +1,6 @@
+import { ADD_TO_CART } from '../constants'
+
+
 const initialState = {
   cart: [],
   total_number: 0,
@@ -14,5 +17,6 @@ const shopReducer = (state = initialState, action) => {
 export default shopReducer
 
 export const getCartProducts = state => []
+export const getProducts = state => []
 export const getTotalNumber = state => 0
 export const getTotalCash = state => 0
