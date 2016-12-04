@@ -25,9 +25,9 @@ class CartItems extends Component {
     )
 
     return (
-      <div>
+      <Item.Group divided>
         {cartContent}
-      </div>
+      </Item.Group>
     )
   }
 }
