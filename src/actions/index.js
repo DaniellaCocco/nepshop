@@ -2,7 +2,7 @@ import * as types from '../constants'
 
 // Actions creators
 
-export const addToCart = id => ({
+export const addToCart = product => ({
   type: types.ADD_TO_CART,
-  id
+  product
 })

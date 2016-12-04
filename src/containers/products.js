@@ -26,7 +26,7 @@ const ProductsList = ({addToCart}) => {
           <Item.Extra>
             <Button
               primary floated='right'
-              onClick={() => addToCart(product.id)}>
+              onClick={() => addToCart(product)}>
               Buy
             </Button>
           </Item.Extra>

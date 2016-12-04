@@ -9,7 +9,7 @@ const shopReducer = (state = initialState, action) => {
     case ADD_TO_CART:
       return {
         ...state,
-        cart: [ ...state.cart, action.id ]
+        cart: [ ...state.cart, action.product ]
       }
     default:
       return state
