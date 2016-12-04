@@ -4,7 +4,7 @@
   "description": "An example implementation of a modern front-end for a (fake) webshop built with React.",
   "main": "src/index.js",
   "scripts": {
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-register --require ./test/setup.js 'test' --recursive",
     "test-watch": "npm run test --watch --watch-extensions"
   },
@@ -39,6 +39,7 @@
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "react-hot-loader": "1.3.0",
+    "react-redux": "4.4.6",
     "redux": "3.6.0",
     "semantic-ui-react": "0.61.10",
     "webpack": "1.13.3",
