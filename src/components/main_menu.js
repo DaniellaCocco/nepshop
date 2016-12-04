@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Icon, Menu } from 'semantic-ui-react'
 
 class MainMenu extends Component {
   state = {}
@@ -10,7 +10,7 @@ class MainMenu extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu>
+      <Menu attached borderless>
         <Menu.Item
           name='products'
           active={activeItem === 'products'}
@@ -25,6 +25,14 @@ class MainMenu extends Component {
         >
           Cart
         </Menu.Item>
+        <Menu.Menu position='right' icon>
+          <Menu.Item
+            name='indicator'
+            active={activeItem === 'indicator'}
+            onClick={this.handleItemClick}>
+            <Icon name='shopping bag' /> 0
+          </Menu.Item>
+          </Menu.Menu>
       </Menu>
     )
   }
