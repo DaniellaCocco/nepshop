@@ -44,12 +44,6 @@ const ProductsList = ({addToCart}) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    xyz: {}
-  }
-}
-
 const mapDispatchToProps = (dispatch) => {
   return {
     addToCart: (id) => {
@@ -59,7 +53,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const Products = connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(ProductsList)
 
