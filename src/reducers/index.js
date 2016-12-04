@@ -12,3 +12,7 @@ const shopReducer = (state = initialState, action) => {
 }
 
 export default shopReducer
+
+export const getCartProducts = state => []
+export const getTotalNumber = state => 0
+export const getTotalCash = state => 0
