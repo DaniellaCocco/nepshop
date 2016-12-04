@@ -14,18 +14,10 @@ class MenuContainer extends Component {
     return (
       <Menu attached borderless>
         <Menu.Item
-          name='products'
-          active={activeItem === 'products'}
+          name='Nepshop'
           onClick={this.handleItemClick}
         >
-          Products
-        </Menu.Item>
-        <Menu.Item
-          name='cart'
-          active={activeItem === 'cart'}
-          onClick={this.handleItemClick}
-        >
-          Cart
+          Nepshop
         </Menu.Item>
         <Menu.Menu position='right' icon>
           <Menu.Item
@@ -47,15 +39,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    def: {}
-  }
-}
-
 const MainMenu = connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(MenuContainer)
 
 export default MainMenu
