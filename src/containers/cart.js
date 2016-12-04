@@ -7,7 +7,7 @@ import { Item } from 'semantic-ui-react'
 
 let cart_items = []
 
-class Cart extends Component {
+class CartItems extends Component {
 
   render() {
 
@@ -28,10 +28,21 @@ class Cart extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  cart_products: getCartProducts(state),
-  total_cash: getTotalCash(state),
-  total_number: getTotalNumber(state)
-})
+const mapStateToProps = (state) => {
+  return {
+    xyz: {}
+  }
+}
 
-export default connect(mapStateToProps)(Cart)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    abc: {}
+  }
+}
+
+const Cart = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CartItems)
+
+export default Cart
