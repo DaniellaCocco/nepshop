@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Item } from 'semantic-ui-react'
+import { Header, Item, Menu } from 'semantic-ui-react'
 
 const items = [
   {
@@ -56,7 +56,9 @@ class Shop extends Component {
     return (
       <div className="shop">
         <MainMenu />
+        <Header as='h2'>Products</Header>
         <Products />
+        <Header as='h2'>Cart</Header>
         <div className="cart">
           <p>Your cart is empty.</p>
         </div>
