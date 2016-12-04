@@ -22,6 +22,27 @@ const Products = () => (
   <Item.Group items={items} />
 )
 
+let cart_items = []
+
+class Cart extends Component {
+
+  render() {
+
+    const hasItems = cart_items.length > 0
+    const cartContent = hasItems ? (
+      <Item.Group items={cart_items} />
+    ) : (
+      <p>Your cart is empty.</p>
+    )
+
+    return (
+      <div>
+        {cartContent}
+      </div>
+    )
+  }
+}
+
 class MainMenu extends Component {
   state = {}
 
@@ -59,9 +80,7 @@ class Shop extends Component {
         <Header as='h2'>Products</Header>
         <Products />
         <Header as='h2'>Cart</Header>
-        <div className="cart">
-          <p>Your cart is empty.</p>
-        </div>
+        <Cart />
       </div>
     )
   }
