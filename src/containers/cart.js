@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { Item } from 'semantic-ui-react'
 
 let cart_items = []
@@ -22,4 +23,10 @@ class Cart extends Component {
   }
 }
 
-export default Cart
+const mapStateToProps = (state) => ({
+  cart: getCartProducts(state),
+  total_number: getTotalNumber(state),
+  total_cash: getTotalCash(state)
+})
+
+export default connect(mapStateToProps)(Cart)
