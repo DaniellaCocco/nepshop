@@ -2,7 +2,6 @@ import { ADD_TO_CART } from '../constants'
 
 const initialState = {
   cart: [],
-  total_number: 0,
   total_cash: 0
 }
 

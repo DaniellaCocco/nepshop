@@ -32,7 +32,7 @@ class MainMenu extends Component {
             onClick={this.handleItemClick}>
             <Icon name='shopping bag' /> 0
           </Menu.Item>
-          </Menu.Menu>
+        </Menu.Menu>
       </Menu>
     )
   }
