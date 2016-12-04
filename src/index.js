@@ -4,7 +4,7 @@ import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
 import createLogger from 'redux-logger';
 import shopReducer from './reducers'
-import Shop from './containers/shop'
+import Shop from './components/shop'
 
 const logger = createLogger()
 let store = createStore(shopReducer, applyMiddleware(logger))

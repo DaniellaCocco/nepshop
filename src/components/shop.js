@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MainMenu from '../components/main_menu'
+import MainMenu from '../containers/main_menu'
 import Products from '../containers/products'
 import Cart from '../containers/cart'
 import { Grid, Header } from 'semantic-ui-react'

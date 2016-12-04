@@ -2,7 +2,8 @@ import { ADD_TO_CART } from '../constants'
 
 const initialState = {
   cart: [],
-  total_cash: 0
+  total_cash: 0,
+  total_number: 0
 }
 
 const shopReducer = (state = initialState, action) => {
@@ -10,7 +11,8 @@ const shopReducer = (state = initialState, action) => {
     case ADD_TO_CART:
       return {
         ...state,
-        cart: [ ...state.cart, action.id ]
+        cart: [ ...state.cart, action.id ],
+        total_number: state.cart.length
       }
     default:
       return state

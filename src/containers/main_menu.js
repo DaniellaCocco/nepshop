@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { Icon, Menu } from 'semantic-ui-react'
 
-class MainMenu extends Component {
+class MenuContainer extends Component {
   state = {}
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
     const { activeItem } = this.state
+    let amount_of_items = this.props.state.cart.length
 
     return (
       <Menu attached borderless>
@@ -30,12 +32,30 @@ class MainMenu extends Component {
             name='indicator'
             active={activeItem === 'indicator'}
             onClick={this.handleItemClick}>
-            <Icon name='shopping bag' /> 0
+            <Icon name='shopping bag' />
+            { amount_of_items }
           </Menu.Item>
         </Menu.Menu>
       </Menu>
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    state
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    def: {}
+  }
+}
+
+const MainMenu = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MenuContainer)
 
 export default MainMenu

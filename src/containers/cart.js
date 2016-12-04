@@ -11,8 +11,6 @@ class CartItems extends Component {
 
   render() {
 
-    console.log(this.props)
-
     const hasItems = cart_items.length > 0
     const cartContent = hasItems ? (
       <Item.Group items={cart_items} />
