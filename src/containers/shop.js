@@ -1,36 +1,8 @@
 import React, { Component } from 'react'
+import MainMenu from '../components/main_menu'
 import Products from '../components/products'
 import Cart from '../containers/cart'
-import { Header, Item, Menu } from 'semantic-ui-react'
-
-class MainMenu extends Component {
-  state = {}
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
-  render() {
-    const { activeItem } = this.state
-
-    return (
-      <Menu>
-        <Menu.Item
-          name='products'
-          active={activeItem === 'products'}
-          onClick={this.handleItemClick}
-        >
-          Products
-        </Menu.Item>
-        <Menu.Item
-          name='cart'
-          active={activeItem === 'cart'}
-          onClick={this.handleItemClick}
-        >
-          Cart
-        </Menu.Item>
-      </Menu>
-    )
-  }
-}
+import { Header } from 'semantic-ui-react'
 
 class Shop extends Component {
   render() {
