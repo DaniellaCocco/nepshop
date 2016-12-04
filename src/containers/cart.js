@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getCartProducts,
-  getTotalCash,
-  getTotalNumber } from '../reducers/index.js'
 import { Item } from 'semantic-ui-react'
 
 let cart_items = []
