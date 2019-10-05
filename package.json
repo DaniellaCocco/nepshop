@@ -1,30 +1,13 @@
 {
-  "name": "Nepshop",
-  "version": "1.0.0",
-  "description": "An example implementation of a modern front-end for a (fake) webshop built with React.",
+  "name": "nepshop",
   "main": "src/index.js",
   "scripts": {
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-register --require ./test/setup.js 'test' --recursive",
     "test-watch": "npm run test --watch --watch-extensions"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DaniellaCocco/nepshop.git"
-  },
-  "keywords": [
-    "example",
-    "front-end",
-    "webshop",
-    "react",
-    "redux"
-  ],
   "author": "Daniella Cocco <d@daniellacoc.co>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DaniellaCocco/nepshop/issues"
-  },
-  "homepage": "https://github.com/DaniellaCocco/nepshop#readme",
   "dependencies": {
     "babel-cli": "6.16.0",
     "babel-core": "6.18.2",
