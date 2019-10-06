@@ -1,4 +1,4 @@
-> Shows how to set up web project from scratch (in 2016) with React and Redux. Includes a base configuration with Webpack and Babel, and has got Mocha and Chai set up to create unit tests with. Uses Semantic UI React for styles and basic responsiveness.
+> Codebase shows how to set up a web project from scratch (in 2016) with React and Redux. Includes a base configuration with Webpack and Babel, and has got Mocha and Chai set up to create unit tests with. Uses Semantic UI React for styles and responsiveness. It also has some webshop-inspired functionality set up to show the basic workings and file+folder layout of such a project.
 
 ---
 
